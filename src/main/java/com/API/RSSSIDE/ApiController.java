@@ -34,7 +34,7 @@ public class ApiController {
 	private static final String ENCRYPT_KEY = "yourEncryptKey01";
 	// 初期ベクトル
 	private static final String INIT_VECTOR = "yourInitVector01";
-	private static final String template = "This is a test method form test %s!";
+	private static final String template = "This is a test method form %s！";
 	private final AtomicLong counter = new AtomicLong();
 
 //	private final IvParameterSpec iv = new IvParameterSpec(INIT_VECTOR.getBytes());
@@ -58,7 +58,7 @@ public class ApiController {
 	    String strToken="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJUZWFtU3RvcmVBcGkiLCJqdGkiOiI3ZDQyODdiYS0wNWUxLTQ0MzctYjgwNC00YzFlOWY0ZDJjODgiLCJzaWQiOiJURVNUIiwiaXNzIjoiVEVTVCIsImF1ZCI6IlRlYW1TdG9yZUFwaSJ9.oyzDap8Znl-ET2-2x5GLl4wzNJwTHZGOauE-7LuGRYE";
 	    
 	    try {
-		    final String url = "https://192.168.103.16:60001/api/StoredTest?count=5";
+		    final String url = "https://192.168.104.203:60001/api/StoredTest?count=5";
 		    headers = new HttpHeaders();// ヘッダ部
 		    // headers.setBearerAuth(tokenResponse);
 		    headers.setContentType(MediaType.APPLICATION_JSON);
