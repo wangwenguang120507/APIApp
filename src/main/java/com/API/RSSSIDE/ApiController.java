@@ -69,6 +69,7 @@ public class ApiController {
 	    } catch (Exception e) {
 	         e.printStackTrace();
 	         responseJson = e.getMessage();
+	         return responseJson;
 	     }
 	    
 		return responseJson;
