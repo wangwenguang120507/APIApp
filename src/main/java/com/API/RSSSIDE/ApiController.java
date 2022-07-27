@@ -64,7 +64,7 @@ public class ApiController {
 		    headers.setContentType(MediaType.APPLICATION_JSON);
 		    headers.set("Authorization", "Bearer " + strToken); // トークン
 		    entity = new HttpEntity<String>(requestBobgJson, headers);
-		    response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class, "");
+		    response = restTemplate.exchange(url, HttpMethod.POST, entity, String.class, "");
 		    responseJson = response.getBody();
 	    } catch (Exception e) {
 	         e.printStackTrace();
