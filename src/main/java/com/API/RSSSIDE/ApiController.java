@@ -50,7 +50,7 @@ public class ApiController {
 		}
 		
 	    HttpHeaders headers = new HttpHeaders();// ヘッダ部
-	    RestTemplate restTemplate = new RestTemplate();
+	    RestTemplate restTemplate = new RestTemplate(new HttpsClientRequestFactory());
 	    ResponseEntity<String> response;
 	    HttpEntity<String> entity;
 	    String requestBobgJson = "";
