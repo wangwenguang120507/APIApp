@@ -58,11 +58,14 @@ public class ApiController {
 	    String strToken="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJUZWFtU3RvcmVBcGkiLCJqdGkiOiI3ZDQyODdiYS0wNWUxLTQ0MzctYjgwNC00YzFlOWY0ZDJjODgiLCJzaWQiOiJURVNUIiwiaXNzIjoiVEVTVCIsImF1ZCI6IlRlYW1TdG9yZUFwaSJ9.oyzDap8Znl-ET2-2x5GLl4wzNJwTHZGOauE-7LuGRYE";
 	    
 	    try {
-		    final String url = "https://192.168.104.203:60001/api/StoredTest?count=5";
+		    // final String url = "https://192.168.104.203:60001/api/StoredTest?count=5";
+	    	final String url = "http://192.168.104.203:60000/api/StoredTest?count=5";
 		    headers = new HttpHeaders();// ヘッダ部
 		    // headers.setBearerAuth(tokenResponse);
 		    headers.setContentType(MediaType.APPLICATION_JSON);
-		    headers.set("Authorization", "Bearer " + strToken); // トークン
+		    // headers.set("Authorization", "Bearer " + strToken); // トークン
+		    headers.add("Authorization", "Bearer " + strToken); // トークン
+		    System.out.println("■■■■■■■■■■　callRssideApi　：　headers　：" + headers.toString());
 		    entity = new HttpEntity<String>(requestBobgJson, headers);
 		    response = restTemplate.exchange(url, HttpMethod.POST, entity, String.class, "");
 		    responseJson = response.getBody();
