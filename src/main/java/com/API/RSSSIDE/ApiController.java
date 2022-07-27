@@ -96,7 +96,7 @@ public class ApiController {
 	    
 	    try {
 		    // final String url = "https://192.168.104.203:60001/api/StoredTest?count=5";
-	    	final String url = "http://192.168.104.203:60000/api/StoredTest?count=5";
+	    	final String url = "http://192.168.104.11:60000/api/StoredTest?count=5";
 		    headers = new HttpHeaders();// ヘッダ部
 		    // headers.setBearerAuth(tokenResponse);
 		    headers.setContentType(MediaType.APPLICATION_JSON);
